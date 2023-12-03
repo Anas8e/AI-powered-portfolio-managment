@@ -11,7 +11,7 @@ This repository contains code for a portfolio management system with AI integrat
 - Run the project.
 
 ## Project Structure
-- /frontend
+- frontend
   - /components
     - [various frontend components]
   - /styles
