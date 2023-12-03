@@ -1,0 +1,62 @@
+/* Global resets and base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header__nav ul li {
+    display: inline;
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main content sections */
+.main-content {
+    padding: 20px;
+}
+
+.section-home {
+    text-align: center;
+}
+
+.section-about,
+.section-portfolio,
+.section-contact {
+    padding: 50px 0;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Apply animations */
+.section-home__content {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header {
+    animation: slideInLeft 1s ease-in-out;
+}
+/* Add more specific animations to other elements as needed */
