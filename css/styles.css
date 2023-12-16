@@ -1,62 +1,91 @@
-/* Global resets and base styles */
+/* styles.css */
+
+/* Global styles */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 /* Header styles */
 .header {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo img {
+    vertical-align: middle;
 }
 
 .header__nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.header__nav ul li {
-    display: inline;
+.header__nav li {
+    display: inline-block;
 }
 
-.header__nav ul li a {
+.header__nav a {
     text-decoration: none;
-    color: #333;
+    color: #555;
+    transition: color 0.3s ease;
 }
 
-/* Main content sections */
-.main-content {
+.header__nav a:hover {
+    color: #007bff;
+}
+
+/* Portfolio section styles */
+#portfolio,
+#predictions,
+#user-interaction {
+    padding: 40px;
+}
+
+/* Container styles */
+.portfolio-content,
+.prediction-output,
+.user-input-form {
+    background-color: #fff;
+    border-radius: 5px;
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.section-home {
-    text-align: center;
+/* Heading styles */
+h1 {
+    margin-bottom: 20px;
 }
 
-.section-about,
-.section-portfolio,
-.section-contact {
-    padding: 50px 0;
+/* Input styles */
+input[type="text"],
+button[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-/* Footer styles */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+/* Button styles */
+button[type="submit"] {
+    background-color: #007bff;
     color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Apply animations */
-.section-home__content {
-    animation: fadeIn 1s ease-in-out;
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
-.header {
-    animation: slideInLeft 1s ease-in-out;
-}
-/* Add more specific animations to other elements as needed */
+/* Add more styles as needed */

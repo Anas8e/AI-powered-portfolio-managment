@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Management System</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css"> <!-- Link animations.css -->
+    <title>Financial Portfolio Manager</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="css/animations.css"> <!-- Link to animations stylesheet -->
+    <style>
+        /* Add specific styles here if needed */
+    </style>
 </head>
-
 <body>
-    <header class="header animated slideInLeft"> <!-- Add 'animated' class and 'slideInLeft' animation -->
+    <header class="header animated slideInLeft"> <!-- Animated header -->
         <div class="header__logo">
             <img src="assets/images/logo.png" alt="Company Logo" width="150">
         </div>
         <nav class="header__nav">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main-content">
-        <section id="home" class="section-home">
-            <div class="section-home__content animated fadeIn"> <!-- Add 'animated' class and 'fadeIn' animation -->
-                <h1>Welcome to Your Portfolio Manager</h1>
-                <p>Manage your investments with cutting-edge AI technology.</p>
-                <a href="#portfolio" class="btn">Explore Portfolio</a>
+    <section id="portfolio"> <!-- Section for Portfolio Display -->
+        <h1>Portfolio</h1> <!-- Heading for Portfolio Display -->
+        <div class="portfolio-content"> <!-- Container for displaying portfolio content -->
+            <div class="portfolio-item">
+                <h2>Stocks</h2> <!-- Display stock portfolio information -->
             </div>
-        </section>
-
-		<section id="about" class="section-about">
-			<div class="section-about__content">
-				<h2>About Me</h2>
-				<p>I am the developer behind this project, working diligently to create an intuitive and innovative portfolio management system. This project is a part of my journey at Holberton School, serving as a testament to my dedication to mastering front-end and back-end development.</p>
-				<p>Throughout this project, I've embraced the challenges of both front-end design and back-end logic, aiming to deliver a user-centric and technically robust platform. The goal was not only to fulfill academic requirements but also to craft a real-world solution that exemplifies my skills and commitment.</p>
-				<p>Driven by the weight of this portfolio project, I meticulously designed and developed each aspect of the system, ensuring a seamless and efficient user experience. Every line of code represents my dedication to creating an impactful and functional application.</p>
-				<p>Explore my <a href="https://github.com/Anas8e/AI-powered-portfolio-managment/" target="_blank">GitHub repository</a> to delve into the project's codebase and witness the technical intricacies and the culmination of my efforts.</p>
-			</div>
-		</section>
-
-
-
-
-        <section id="portfolio" class="section-portfolio">
-            <div class="section-portfolio__content">
-                <h2>Our Portfolio</h2>
-                <!-- Portfolio content goes here -->
+            <div class="portfolio-item">
+                <h2>Bonds</h2> <!-- Display bond portfolio information -->
             </div>
-        </section>
+            <!-- Add more portfolio items as needed -->
+        </div>
+    </section>
 
-        <section id="contact" class="section-contact">
-            <div class="section-contact__content">
-                <h2>Contact Us</h2>
-                <!-- Contact form or information -->
-            </div>
-        </section>
-    </main>
+    <section id="predictions"> <!-- Section for Prediction Outputs -->
+        <h1>Predictions</h1> <!-- Heading for Prediction Outputs -->
+        <div class="prediction-output"> <!-- Container for displaying prediction outputs -->
+            <p>Predicted performance: XYZ</p> <!-- Display predicted performance -->
+        </div>
+    </section>
 
-    <footer class="footer">
-        <p>&copy; 2023 Portfolio Management System. All rights reserved.</p>
-    </footer>
+    <section id="user-interaction"> <!-- Section for User Interaction Elements -->
+        <h1>User Interaction</h1> <!-- Heading for User Interaction Elements -->
+        <form id="user-input-form"> <!-- Form for user input -->
+            <label for="user-data">Enter portfolio data:</label> <!-- Input fields for user data -->
+            <input type="text" id="user-data" name="user-data">
+            <button type="submit">Submit</button> <!-- Button to submit user data -->
+        </form>
+    </section>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> <!-- Scripts for JavaScript functionality -->
     <script src="js/aiLogic.js"></script>
 </body>
-
 </html>
