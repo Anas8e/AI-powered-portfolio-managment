@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
@@ -88,4 +86,29 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+/* Placeholder styles */
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#user-interaction form {
+    margin-top: 20px;
+}
+
+#user-interaction p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Additional styles */
 /* Add more styles as needed */

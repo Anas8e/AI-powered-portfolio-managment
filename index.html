@@ -7,54 +7,74 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Link to the main stylesheet -->
     <link rel="stylesheet" href="css/animations.css"> <!-- Link to animations stylesheet -->
     <style>
-        /* Add specific styles here if needed */
+        /* Include additional styles for landing page enhancements */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
     </style>
 </head>
 <body>
-    <header class="header animated slideInLeft"> <!-- Animated header -->
-        <div class="header__logo">
-            <img src="assets/images/logo.png" alt="Company Logo" width="150">
-        </div>
-        <nav class="header__nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header class="header animated slideInLeft">
+		<div class="header__logo">
+			<img src="assets/images/logo.png" alt="Company Logo" width="150">
+		</div>
+		<nav class="header__nav">
+			<ul style="margin-right: 40px;"> <!-- Add margin-right to the ul -->
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="index.html">Portfolio</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <section id="portfolio"> <!-- Section for Portfolio Display -->
-        <h1>Portfolio</h1> <!-- Heading for Portfolio Display -->
-        <div class="portfolio-content"> <!-- Container for displaying portfolio content -->
-            <div class="portfolio-item">
-                <h2>Stocks</h2> <!-- Display stock portfolio information -->
+
+    <main>
+        <section id="portfolio" class="animated fadeIn">
+            <h1>Portfolio</h1>
+            <div class="portfolio-content">
+                <article class="portfolio-item animated slideInLeft">
+                    <h2>Stocks</h2>
+                    <p>Here, you'll find a detailed breakdown of your stock investments including performance, diversification, and insights.</p>
+                    <!-- Placeholder for stock portfolio information -->
+                </article>
+                <article class="portfolio-item animated slideInRight">
+                    <h2>Bonds</h2>
+                    <p>Discover your bond portfolio specifics, like yields, maturities, and risk analysis.</p>
+                    <!-- Placeholder for bond portfolio information -->
+                </article>
+                <!-- Additional portfolio items can be added -->
             </div>
-            <div class="portfolio-item">
-                <h2>Bonds</h2> <!-- Display bond portfolio information -->
+        </section>
+
+        <section id="predictions" class="animated fadeIn">
+            <h1>Predictions</h1>
+            <div class="prediction-output animated fadeIn">
+                <p>Predicted performance: XYZ</p>
+                <p>Based on historical data and predictive models, we forecast your portfolio's future performance.</p>
+                <!-- Placeholder for dynamic prediction content -->
             </div>
-            <!-- Add more portfolio items as needed -->
-        </div>
-    </section>
+        </section>
 
-    <section id="predictions"> <!-- Section for Prediction Outputs -->
-        <h1>Predictions</h1> <!-- Heading for Prediction Outputs -->
-        <div class="prediction-output"> <!-- Container for displaying prediction outputs -->
-            <p>Predicted performance: XYZ</p> <!-- Display predicted performance -->
-        </div>
-    </section>
+        <section id="user-interaction" class="animated fadeIn">
+            <h1>User Interaction</h1>
+            <form id="user-input-form" class="animated slideInLeft">
+                <label for="user-data">Enter portfolio data:</label>
+                <input type="text" id="user-data" name="user-data">
+                <button type="submit">Submit</button>
+            </form>
+            <p class="animated slideInRight">Use this form to input new data or modify your portfolio for updated predictions.</p>
+            <!-- Placeholder for user interaction content -->
+        </section>
+    </main>
 
-    <section id="user-interaction"> <!-- Section for User Interaction Elements -->
-        <h1>User Interaction</h1> <!-- Heading for User Interaction Elements -->
-        <form id="user-input-form"> <!-- Form for user input -->
-            <label for="user-data">Enter portfolio data:</label> <!-- Input fields for user data -->
-            <input type="text" id="user-data" name="user-data">
-            <button type="submit">Submit</button> <!-- Button to submit user data -->
-        </form>
-    </section>
-
-    <script src="js/main.js"></script> <!-- Scripts for JavaScript functionality -->
+    <script src="js/main.js"></script>
     <script src="js/aiLogic.js"></script>
 </body>
 </html>
