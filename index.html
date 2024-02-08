@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Portfolio Manager</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to the main stylesheet -->
-    <link rel="stylesheet" href="css/animations.css"> <!-- Link to animations stylesheet -->
-    <style>
-        /* Include additional styles for landing page enhancements */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Financial Portfolio Manager</title>
+        <link rel="stylesheet" href="css/styles.css"> <!-- Link to the main stylesheet -->
+        <link rel="stylesheet" href="css/animations.css"> <!-- Link to animations stylesheet -->
+        <style>
+                /* Include additional styles for landing page enhancements */
+                nav ul {
+                        list-style-type: none;
+                        padding: 0;
+                }
+                nav ul li {
+                        display: inline;
+                        margin-right: 20px;
+                }
+				/* Add your styles for an elegant side-by-side layout */
+				/* For example: */
+				body {
+				  display: flex;
+				  flex-direction: column;
+				  align-items: center;
+				  font-family: Arial, sans-serif;
+				}
 
-    </style>
+				section {
+				  margin-bottom: 20px;
+				}
+
+				.stock-selection select {
+				  margin-right: 10px; /* Adjust the margin as needed */
+				}
+				.container {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 100vh;
+				}
+				.frame {
+					border: 2px solid #ccc;
+					padding: 20px;
+					border-radius: 10px;
+				}
+
+				/* Style for each section */
+				section {
+					margin: 10px;
+				}
+    /* Add more styles as needed */
+        </style>
 </head>
 <body>
 	<header class="header animated slideInLeft">
@@ -35,63 +67,65 @@
 	</header>
 
 
-    <main>
-        <section id="portfolio" class="animated fadeIn">
-            <h1>Portfolio</h1>
-            <div class="portfolio-content">
-                <article class="portfolio-item animated slideInLeft">
-                    <h2>Stocks</h2>
-                    <p>Here, you'll find a detailed breakdown of your stock investments including performance, diversification, and insights.</p>
-                    <!-- Placeholder for stock portfolio information -->
-                </article>
-                <article class="portfolio-item animated slideInRight">
-                    <h2>Bonds</h2>
-                    <p>Discover your bond portfolio specifics, like yields, maturities, and risk analysis.</p>
-                    <!-- Placeholder for bond portfolio information -->
-                </article>
-                <!-- Additional portfolio items can be added -->
-            </div>
-        </section>
-		
-		<section class="portfolio-section">
-		  <h1>DEMO</h1>
-		  <div class="input-group">
-			<label for="numberOfStocks">Choose the number of stocks (2-5):</label>
-			<input type="number" id="numberOfStocks" min="2" max="5">
-		  </div>
+        <main>
+                <section id="portfolio" class="animated fadeIn">
+                        <h1>Portfolio</h1>
+                        <div class="portfolio-content">
+                                <article class="portfolio-item animated slideInLeft">
+                                        <h2>Stocks</h2>
+                                        <p>Here, you'll find a detailed breakdown of your stock investments including performance, diversification, and insights.</p>
+                                        <!-- Placeholder for stock portfolio information -->
+                                </article>
+                                <article class="portfolio-item animated slideInRight">
+                                        <h2>Bonds</h2>
+                                        <p>Discover your bond portfolio specifics, like yields, maturities, and risk analysis.</p>
+                                        <!-- Placeholder for bond portfolio information -->
+                                </article>
+                                <!-- Additional portfolio items can be added -->
+                        </div>
+                </section>
 
-		  <div class="input-group">
-			<label for="investmentAmount">Enter amount to invest ($):</label>
-			<input type="number" id="investmentAmount">
-		  </div>
+				<section class="frame">
+					<div class="portfolio-selection">
+						<h1>DEMO</h1>
+						<label for="stockNumber">Select number of stocks (2-5): </label>
+						<input type="number" id="stockNumber" min="2" max="5">
+						<button id="nextButton">Next</button>
+					</div>
 
-		  <button class="next-button" onclick="showStockSelection()">Next</button>
+					<div class="investment-amount">
+						<label for="amount">Enter investment amount: </label>
+						<input type="number" id="amount">
+						<button id="update amount">Update amount</button>
+					</div>
 
-		  <div class="stock-selections">
-			<div class="stock-column" id="stockColumn1"></div>
-			<div class="stock-column" id="stockColumn2"></div>
-		  </div>
+					<div class="stock-selection">
+						<!-- Dropdowns dynamically generated here -->
+					</div>
 
-		  <button class="calculate-button" onclick="calculatePortfolio()">Calculate Optimal Portfolio</button>
-		</section>
-
-
-
+					<div class="calculate-button">
+						<button id="calculateButton">Calculate Optimal Portfolio</button>
+					</div>
+				</section>
 
 
-        <section id="user-interaction" class="animated fadeIn">
-            <h1>User Interaction</h1>
-            <form id="user-input-form" class="animated slideInLeft">
-                <label for="user-data">Enter portfolio data:</label>
-                <input type="text" id="user-data" name="user-data">
-                <button type="submit">Submit</button>
-            </form>
-            <p class="animated slideInRight">Use this form to input new data or modify your portfolio for updated predictions.</p>
-            <!-- Placeholder for user interaction content -->
-        </section>
-    </main>
 
-    <script src="js/main.js"></script>
-    <script src="js/aiLogic.js"></script>
+
+
+
+                <section id="user-interaction" class="animated fadeIn">
+                        <h1>User Interaction</h1>
+                        <form id="user-input-form" class="animated slideInLeft">
+                                <label for="user-data">Enter portfolio data:</label>
+                                <input type="text" id="user-data" name="user-data">
+                                <button type="submit">Submit</button>
+                        </form>
+                        <p class="animated slideInRight">Use this form to input new data or modify your portfolio for updated predictions.</p>
+                        <!-- Placeholder for user interaction content -->
+                </section>
+        </main>
+
+        <script src="js/main.js"></script>
+        <script src="js/aiLogic.js"></script>
 </body>
 </html>

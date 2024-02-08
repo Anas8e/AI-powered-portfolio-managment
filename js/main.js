@@ -10,52 +10,41 @@ function displayPredictions(data) {
     // Code to showcase predictions
 }
 
-function showStockSelection() {
-  const numberOfStocks = document.getElementById('numberOfStocks').value;
-  const investmentAmount = document.getElementById('investmentAmount').value;
-  const stockSelectionsColumn1 = document.querySelector('.stock-selections .stock-column:nth-child(1)');
-  const stockSelectionsColumn2 = document.querySelector('.stock-selections .stock-column:nth-child(2)');
+document.getElementById('nextButton').addEventListener('click', function() {
+  const stockNumber = document.getElementById('stockNumber').value;
+  generateStockDropdowns(stockNumber);
+});
 
-  stockSelectionsColumn1.innerHTML = '';
-  stockSelectionsColumn2.innerHTML = '';
+function generateStockDropdowns(number) {
+  const stockSelectionSection = document.querySelector('.stock-selection');
+  stockSelectionSection.innerHTML = '';
 
-  // Placeholder stock options
-  const placeholderStocks = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'FB', 'TSLA', 'NFLX'];
-
-  for (let i = 0; i < numberOfStocks; i++) {
-    const stockDropdown = document.createElement('select');
-    stockDropdown.name = `stock${i + 1}`;
-
-    // Adding placeholder options to dropdown
-    for (const stock of placeholderStocks) {
-      const option = document.createElement('option');
-      option.value = stock;
-      option.text = stock;
-      stockDropdown.appendChild(option);
-    }
-
-    const stockLabel = document.createElement('label');
-    stockLabel.textContent = `Stock ${i + 1}:`;
-
-    // Apply spacing to stock options
-    stockDropdown.style.margin = '5px'; // Adjust the margin as needed
-
-    // Distributing stock dropdowns between columns
-    if (i < numberOfStocks / 2) {
-      stockSelectionsColumn1.appendChild(stockLabel);
-      stockSelectionsColumn1.appendChild(stockDropdown);
-    } else {
-      stockSelectionsColumn2.appendChild(stockLabel);
-      stockSelectionsColumn2.appendChild(stockDropdown);
-    }
+  for (let i = 0; i < number; i++) {
+    const dropdown = document.createElement('select');
+    dropdown.innerHTML = `
+      <option value="">Select stock</option>
+      <option value="AAPL">Apple Inc.</option>
+      <option value="GOOGL">Alphabet Inc. (Google)</option>
+      <option value="MSFT">Microsoft Corporation</option>
+      <!-- Add more placeholder stock options -->
+    `;
+    stockSelectionSection.appendChild(dropdown);
   }
 }
 
+document.getElementById('chooseStocksButton').addEventListener('click', function() {
+  // Logic to handle stock selection after the amount is entered
+  // You would capture the selected stocks here
+  // For brevity, skipping the entire logic
+});
 
+document.getElementById('calculateButton').addEventListener('click', function() {
+  calculatePortfolio();
+});
 
+// Function to calculate the optimal portfolio
 function calculatePortfolio() {
     // Here, you'd retrieve the selected stocks from the dropdowns
     // Calculate the optimal portfolio based on the chosen stocks and investment amount
     // Split the amount based on the optimal proportion and display the result
 }
-
