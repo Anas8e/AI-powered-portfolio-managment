@@ -1,131 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Financial Portfolio Manager</title>
-        <link rel="stylesheet" href="css/styles.css"> <!-- Link to the main stylesheet -->
-        <link rel="stylesheet" href="css/animations.css"> <!-- Link to animations stylesheet -->
-        <style>
-                /* Include additional styles for landing page enhancements */
-                nav ul {
-                        list-style-type: none;
-                        padding: 0;
-                }
-                nav ul li {
-                        display: inline;
-                        margin-right: 20px;
-                }
-				/* Add your styles for an elegant side-by-side layout */
-				/* For example: */
-				body {
-				  display: flex;
-				  flex-direction: column;
-				  align-items: center;
-				  font-family: Arial, sans-serif;
-				}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth.ai - Revolutionizing Wealth Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for landing page enhancements */
+		* {
+			box-sizing: border-box; /* Include padding and border in the element's total width and height */
+		}
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #398499, #CADF9E); /* Gradient background with provided hex colors */
+            color: #1F2041; /* Text color using the provided hex */
+        }
 
-				section {
-				  margin-bottom: 20px;
-				}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-				.stock-selection select {
-				  margin-right: 10px; /* Adjust the margin as needed */
-				}
-				.container {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 100vh;
-				}
-				.frame {
-					border: 2px solid #ccc;
-					padding: 20px;
-					border-radius: 10px;
-				}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            transition: transform 0.3s ease; /* Add transition for smooth effect */
+        }
 
-				/* Style for each section */
-				section {
-					margin: 10px;
-				}
-    /* Add more styles as needed */
-        </style>
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            color: #fff; /* White heading color */
+        }
+
+        .section p {
+            font-size: 1.3em;
+            color: #1F2041; /* Lighter text color */
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            font-size: 4em;
+            color: #fff; /* White icon color */
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #9DF7E5; /* Button background color using the provided hex */
+            color: #1F2041; /* Button text color using the provided hex */
+            padding: 15px 40px;
+            border: 2px solid #fff; /* White border */
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #CADF9E; /* Button background color on hover using the provided hex */
+            color: #1F2041; /* Button text color on hover using the provided hex */
+            border-color: #CADF9E; /* Button border color on hover using the provided hex */
+        }
+
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px; /* Adjusted padding */
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+        }
+
+        .header__logo img {
+            width: 130px;
+        }
+
+        .header__nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header__nav ul li {
+            margin-right: 20px;
+        }
+
+        .header__nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        .header__nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px; /* Adjust padding for oval shape */
+            border-radius: 50px; /* Make oval shape */
+            display: inline-block; /* Ensure inline-block display for proper shape */
+            background-color: #398499; /* Background color using provided hex */
+        }
+
+        .header__nav ul li a:hover {
+            background-color: #CADF9E; /* Change background color on hover using the provided hex */
+            transform: scale(1.1); /* Add scaling effect on hover */
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding-top: 70px; /* Adjusted padding to accommodate fixed header */
+        }
+    </style>
 </head>
 <body>
-	<header class="header animated slideInLeft">
-		<div class="header__logo">
-			<img src="assets/images/logo.png" alt="Company Logo" width="150">
-		</div>
-		<nav class="header__nav">
-			<ul style="margin-right: 40px;"> <!-- Add margin-right to the ul -->
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="index.html">Portfolio</a></li>
-				<li><a href="#Contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/images/logo.png" alt="Wealth.ai Logo" width="200">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#portfolio">Our Portfolio</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="main-content">
+        <section id="hero" class="section">
+            <h2>Revolutionize Your Wealth Management</h2>
+            <p>Empower your financial decisions with cutting-edge AI technology.</p>
+            <i class="fas fa-rocket icon"></i>
+            <button class="btn">Get Started</button>
+        </section>
 
-        <main>
-                <section id="portfolio" class="animated fadeIn">
-                        <h1>Portfolio</h1>
-                        <div class="portfolio-content">
-                                <article class="portfolio-item animated slideInLeft">
-                                        <h2>Stocks</h2>
-                                        <p>Here, you'll find a detailed breakdown of your stock investments including performance, diversification, and insights.</p>
-                                        <!-- Placeholder for stock portfolio information -->
-                                </article>
-                                <article class="portfolio-item animated slideInRight">
-                                        <h2>Bonds</h2>
-                                        <p>Discover your bond portfolio specifics, like yields, maturities, and risk analysis.</p>
-                                        <!-- Placeholder for bond portfolio information -->
-                                </article>
-                                <!-- Additional portfolio items can be added -->
-                        </div>
-                </section>
+        <section id="features" class="section">
+            <h2>Key Features</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h3>Advanced Analytics</h3>
+                    <p>Gain deep insights into your investment performance with detailed analytics and reporting tools. Track your portfolio's performance over time and identify trends to make informed decisions.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-tie icon"></i>
+                    <h3>Expert Guidance</h3>
+                    <p>Get personalized recommendations and guidance from financial experts who understand your unique goals and risk tolerance. Our team of professionals is dedicated to helping you achieve financial success.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt icon"></i>
+                    <h3>Secure & Private</h3>
+                    <p>Rest assured knowing that your data is protected with state-of-the-art security measures. We prioritize the privacy and security of your personal and financial information, employing encryption and other security protocols to keep your data safe.</p>
+                </div>
+            </div>
+        </section>
 
-				<section class="frame">
-					<div class="portfolio-selection">
-						<h1>DEMO</h1>
-						<label for="stockNumber">Select number of stocks (2-5): </label>
-						<input type="number" id="stockNumber" min="2" max="5">
-						<button id="nextButton">Next</button>
-					</div>
+        <section id="testimonials" class="section">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"Wealth.ai has truly revolutionized the way I manage my finances. The advanced analytics provided invaluable insights into my investment performance, helping me make smarter decisions and achieve my financial goals faster than ever before."</p>
+                    <span>- John Doe, CEO</span>
+                </div>
+                <div class="testimonial">
+                    <p>"The intuitive interface and powerful tools make managing my portfolio a breeze. With expert guidance and personalized recommendations, I feel confident in my investment decisions and can focus on reaching my financial objectives."</p>
+                    <span>- Jane Smith, Investor</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
-					<div class="investment-amount">
-						<label for="amount">Enter investment amount: </label>
-						<input type="number" id="amount">
-						<button id="update amount">Update amount</button>
-					</div>
-
-					<div class="stock-selection">
-						<!-- Dropdowns dynamically generated here -->
-					</div>
-
-					<div class="calculate-button">
-						<button id="calculateButton">Calculate Optimal Portfolio</button>
-					</div>
-				</section>
-
-
-
-
-
-
-                <section id="user-interaction" class="animated fadeIn">
-                        <h1>User Interaction</h1>
-                        <form id="user-input-form" class="animated slideInLeft">
-                                <label for="user-data">Enter portfolio data:</label>
-                                <input type="text" id="user-data" name="user-data">
-                                <button type="submit">Submit</button>
-                        </form>
-                        <p class="animated slideInRight">Use this form to input new data or modify your portfolio for updated predictions.</p>
-                        <!-- Placeholder for user interaction content -->
-                </section>
-        </main>
-
-        <script src="js/main.js"></script>
-        <script src="js/aiLogic.js"></script>
+    <footer>
+        <p>Copyright © 2024 Wealth.ai, All rights reserved.</p>
+    </footer>
 </body>
 </html>
